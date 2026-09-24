@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Conhecendo o Bootstrap · Taleggio Trattoria</title>
+<meta name="description" content="Documentação do projeto Taleggio Trattoria: como o Bootstrap 5 foi utilizado no desenvolvimento do site.">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'><path fill='%23A23B22' d='M12 0C13 7 17 11 24 12 17 13 13 17 12 24 11 17 7 13 0 12 7 11 11 7 12 0Z'/></svg>">
+
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..700;1,9..144,300..700&family=Instrument+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- botão flutuante de volta — sempre clicável -->
+<a href="index.html" class="back-float"><i class="bi bi-arrow-left"></i> Início</a>
+
+<!-- ================= NAVBAR ================= -->
+<nav class="nav-tl" id="nav">
+  <div class="container-xl nav-inner">
+    <a class="brand" href="index.html">Taleggio <small>trattoria</small></a>
+    <div class="nav-links d-none d-lg-flex">
+      <a href="index.html">Início</a>
+      <a href="index.html#cardapio">Il menù</a>
+      <a href="index.html#reserva">Reservas</a>
+      <a href="bootstrap.html" class="active">Bootstrap</a>
+    </div>
+    <div class="d-flex align-items-center gap-2">
+      <a href="index.html#reserva" class="btn-reserve sm d-none d-sm-inline-flex">Reservar <i class="bi bi-arrow-right"></i></a>
+      <button class="burger d-lg-none" data-bs-toggle="collapse" data-bs-target="#navMenu" aria-label="Abrir menu"><i class="bi bi-list"></i></button>
+    </div>
+  </div>
+  <div class="collapse nav-collapse d-lg-none" id="navMenu">
+    <div class="container-xl py-3">
+      <a href="index.html">Início</a>
+      <a href="index.html#cardapio">Il menù</a>
+      <a href="index.html#reserva">Reservas</a>
+      <a href="bootstrap.html">Bootstrap</a>
+    </div>
+  </div>
+</nav>
+
+<!-- ================= HERO ================= -->
+<header class="bp-hero" id="topo">
+  <div class="container-xl">
+    <div class="hero-meta reveal">
+      <span class="lbl">Documentação do projeto</span>
+      <span class="lbl highlight">Bootstrap 5.3.3</span>
+    </div>
+    <h1 class="bp-title reveal" data-d="1">Conhecendo<br><em>o Bootstrap.</em></h1>
+    <p class="bp-lead reveal" data-d="2">Esta página explica como o framework mais popular de CSS do mundo
+    sustenta o site da Trattoria Taleggio — do sistema de grid até o modal que confirma a sua reserva.
+    Todos os exemplos abaixo são <strong>vivos</strong>: redimensione a janela e teste cada um.</p>
+  </div>
+</header>
+
+<!-- ================= 01 · O QUE É ================= -->
+<section class="bp-sec" id="oque-e">
+  <div class="container-xl">
+    <div class="sec-head reveal"><span class="num">(01)</span><span class="lbl">O que é?</span></div>
+    <div class="row gy-4">
+      <div class="col-lg-7">
+        <h2 class="sec-title reveal" data-d="1">Um kit de <em>construção</em> para a web</h2>
+        <p class="bp-par reveal" data-d="2">O <strong>Bootstrap</strong> é um <em>framework front-end</em> de código aberto
+        criado em 2011 pelos engenheiros do Twitter (Mark Otto e Jacob Thornton). Ele reúne CSS e JavaScript
+        prontos e testados — botões, formulários, menus, modais e um sistema de layout — que o desenvolvedor
+        reutiliza em vez de escrever tudo do zero.</p>
+        <p class="bp-par reveal" data-d="3">É a biblioteca mais popular do mundo nessa categoria: segundo a
+        documentação oficial, atende <strong>cerca de 22% de todos os sites da internet</strong>.</p>
+      </div>
+      <div class="col-lg-4 offset-lg-1">
+        <div class="bp-fact reveal" data-d="2">
+          <i class="bi bi-bootstrap"></i>
+          <p><strong>No nosso projeto,</strong> o Bootstrap sustenta toda a estrutura: layout, navegação,
+          formulário de reserva e as interações da página.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= 02 · PARA QUE SERVE ================= -->
+<section class="bp-sec" id="para-que">
+  <div class="container-xl">
+    <div class="sec-head reveal"><span class="num">(02)</span><span class="lbl">Para que serve?</span></div>
+    <div class="row gy-4">
+      <div class="col-lg-7">
+        <h2 class="sec-title reveal" data-d="1">Problemas que ele <em>resolve</em></h2>
+        <p class="bp-par reveal" data-d="2">Sem um framework, cada site precisaria reinventar a roda: escrever CSS
+        para alinhar colunas, testar em dezenas de tamanhos de tela e criar do zero coisas complexas como menus
+        suspensos e janelas modais. O Bootstrap resolve isso entregando:</p>
+        <ul class="bp-list reveal" data-d="3">
+          <li><i class="bi bi-check2-circle"></i><span><strong>Velocidade de desenvolvimento</strong> — componentes prontos que funcionam assim que a classe é aplicada;</span></li>
+          <li><i class="bi bi-check2-circle"></i><span><strong>Responsividade garantida</strong> — o grid se adapta sozinho a celular, tablet e desktop;</span></li>
+          <li><i class="bi bi-check2-circle"></i><span><strong>Consistência visual</strong> — espaçamentos, tipografia e cores padronizados;</span></li>
+          <li><i class="bi bi-check2-circle"></i><span><strong>Compatibilidade entre navegadores</strong> — as diferenças de cada navegador já foram tratadas;</span></li>
+          <li><i class="bi bi-check2-circle"></i><span><strong>Interatividade sem escrever JavaScript</strong> — modais, dropdowns e toasts funcionam só com atributos <code>data-bs-*</code>.</span></li>
+        </ul>
+      </div>
+      <div class="col-lg-4 offset-lg-1">
+        <div class="bp-fact olive reveal" data-d="2">
+          <i class="bi bi-lightning-charge"></i>
+          <p><strong>Resultado prático:</strong> o modal de confirmação da reserva abriu e fechou
+          com <em>zero</em> linhas de JavaScript — apenas atributos HTML.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= 03 · GRID ================= -->
+<section class="bp-sec" id="grid">
+  <div class="container-xl">
+    <div class="sec-head reveal"><span class="num">(03)</span><span class="lbl">Sistema de grid</span></div>
+    <h2 class="sec-title reveal" data-d="1">A página é uma <em>grade</em> de 12 colunas</h2>
+    <p class="bp-par reveal" data-d="2">O coração do Bootstrap é o grid: a largura da página é dividida
+    em <strong>12 colunas</strong>, e montamos o layout combinando três peças:</p>
+
+    <div class="row gy-3 mt-2">
+      <div class="col-md-4">
+        <div class="bp-mini reveal"><span class="bp-mini-n">1</span><strong>container</strong><p>Envolve todo o conteúdo e centraliza a página com largura máxima.</p></div>
+      </div>
+      <div class="col-md-4" data-d="1">
+        <div class="bp-mini reveal"><span class="bp-mini-n">2</span><strong>row</strong><p>Cria uma linha horizontal. Só pode existir dentro de um container.</p></div>
+      </div>
+      <div class="col-md-4" data-d="2">
+        <div class="bp-mini reveal"><span class="bp-mini-n">3</span><strong>col</strong><p>As colunas ocupam a linha. O total soma até 12 por linha.</p></div>
+      </div>
+    </div>
+
+    <div class="bp-demo reveal mt-4">
+      <span class="bp-chip">Demonstração viva</span>
+      <h3 class="bp-demo-title"><code>col</code> — duas colunas iguais em qualquer tela</h3>
+      <div class="bp-demo-grid">
+        <div class="row g-2">
+          <div class="col"><div class="bp-cell">col</div></div>
+          <div class="col"><div class="bp-cell">col</div></div>
+        </div>
+      </div>
+      <pre class="bp-code">&lt;div class="container"&gt;
+  &lt;div class="row"&gt;
+    &lt;div class="col"&gt;col&lt;/div&gt;
+    &lt;div class="col"&gt;col&lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</pre>
+    </div>
+
+    <div class="bp-demo reveal mt-4">
+      <span class="bp-chip">Demonstração viva</span>
+      <h3 class="bp-demo-title"><code>col-md-6</code> — empilha no celular, divide no tablet (≥768px)</h3>
+      <p class="bp-demo-hint">📱 Estreite a janela: as caixas se empilham. 💻 Alargue: voltam a dividir.</p>
+      <div class="bp-demo-grid">
+        <div class="row g-2">
+          <div class="col-12 col-md-6"><div class="bp-cell">col-12 / col-md-6</div></div>
+          <div class="col-12 col-md-6"><div class="bp-cell">col-12 / col-md-6</div></div>
+        </div>
+      </div>
+      <pre class="bp-code">&lt;div class="row"&gt;
+  &lt;div class="col-12 col-md-6"&gt;…&lt;/div&gt;
+  &lt;div class="col-12 col-md-6"&gt;…&lt;/div&gt;
+&lt;/div&gt;</pre>
+    </div>
+
+    <div class="bp-demo reveal mt-4">
+      <span class="bp-chip">Demonstração viva</span>
+      <h3 class="bp-demo-title"><code>col-lg-3</code> — 1 coluna no celular, 2 no tablet, 4 no notebook (≥992px)</h3>
+      <div class="bp-demo-grid">
+        <div class="row g-2">
+          <div class="col-12 col-md-6 col-lg-3"><div class="bp-cell">col-lg-3</div></div>
+          <div class="col-12 col-md-6 col-lg-3"><div class="bp-cell">col-lg-3</div></div>
+          <div class="col-12 col-md-6 col-lg-3"><div class="bp-cell">col-lg-3</div></div>
+          <div class="col-12 col-md-6 col-lg-3"><div class="bp-cell">col-lg-3</div></div>
+        </div>
+      </div>
+      <pre class="bp-code">&lt;div class="row"&gt;
+  &lt;div class="col-12 col-md-6 col-lg-3"&gt;…&lt;/div&gt;
+  &lt;div class="col-12 col-md-6 col-lg-3"&gt;…&lt;/div&gt;
+  &lt;div class="col-12 col-md-6 col-lg-3"&gt;…&lt;/div&gt;
+  &lt;div class="col-12 col-md-6 col-lg-3"&gt;…&lt;/div&gt;
+&lt;/div&gt;</pre>
+    </div>
+
+    <p class="bp-par reveal mt-4"><strong>Onde usamos no projeto:</strong> <em>todas</em> as seções seguem esse padrão.
+    Exemplo real do hero: o texto ocupa <code>col-lg-7</code> e a foto <code>col-lg-5</code> (7 + 5 = 12 colunas) —
+    no celular, cada um vira <code>col-12</code> e se empilha naturalmente.</p>
+  </div>
+</section>
+
+<!-- ================= 04 · RESPONSIVIDADE ================= -->
+<section class="bp-sec" id="responsividade">
+  <div class="container-xl">
+    <div class="sec-head reveal"><span class="num">(04)</span><span class="lbl">Responsividade</span></div>
+    <div class="row gy-4">
+      <div class="col-lg-7">
+        <h2 class="sec-title reveal" data-d="1">Um site, <em>infinitas telas</em></h2>
+        <p class="bp-par reveal" data-d="2"><strong>Design responsivo</strong> é a técnica de fazer uma única página
+        se reorganizar conforme o tamanho da tela — sem versões separadas para celular e computador. O Bootstrap
+        consegue isso com <em>media queries</em> prontas, agrupadas em cinco <em>breakpoints</em> que dão nome
+        às classes: <code>col-sm-*</code>, <code>col-md-*</code>, <code>col-lg-*</code> e <code>col-xl-*</code>.</p>
+      </div>
+      <div class="col-lg-4 offset-lg-1">
+        <div class="bp-fact reveal" data-d="2">
+          <i class="bi bi-arrows-fullscreen"></i>
+          <p><strong>Teste aqui:</strong> redimensione a janela do navegador e veja o exemplo abaixo mudar na hora.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="bp-demo reveal mt-4">
+      <span class="bp-chip">Demonstração viva</span>
+      <h3 class="bp-demo-title">Qual tela você está usando agora?</h3>
+      <div class="bp-dev d-block d-sm-none">📱 <strong>Celular</strong> — menor que 576px (<code>xs</code>)</div>
+      <div class="bp-dev d-none d-sm-block d-md-none">📱 <strong>Celular grande</strong> — ≥576px (<code>sm</code>)</div>
+      <div class="bp-dev d-none d-md-block d-lg-none">📱 <strong>Tablet</strong> — ≥768px (<code>md</code>)</div>
+      <div class="bp-dev d-none d-lg-block d-xl-none">💻 <strong>Notebook</strong> — ≥992px (<code>lg</code>)</div>
+      <div class="bp-dev d-none d-xl-block">🖥️ <strong>Monitor grande</strong> — ≥1200px (<code>xl</code>)</div>
+      <pre class="bp-code">&lt;div class="d-block d-sm-none"&gt;📱 Celular&lt;/div&gt;
+&lt;div class="d-none d-sm-block d-md-none"&gt;📱 Celular grande&lt;/div&gt;
+&lt;div class="d-none d-md-block d-lg-none"&gt;📱 Tablet&lt;/div&gt;
+&lt;div class="d-none d-lg-block d-xl-none"&gt;💻 Notebook&lt;/div&gt;
+&lt;div class="d-none d-xl-block"&gt;🖥️ Monitor&lt;/div&gt;</pre>
+    </div>
+
+    <div class="table-responsive reveal mt-4">
+      <table class="table bp-table align-middle">
+        <thead><tr><th>Breakpoint</th><th>Largura mínima</th><th>Classe</th><th>Dispositivo típico</th></tr></thead>
+        <tbody>
+          <tr><td><code>xs</code></td><td>&lt; 576px</td><td><code>col-*</code></td><td>📱 Celular</td></tr>
+          <tr><td><code>sm</code></td><td>≥ 576px</td><td><code>col-sm-*</code></td><td>📱 Celular grande</td></tr>
+          <tr><td><code>md</code></td><td>≥ 768px</td><td><code>col-md-*</code></td><td>📱 Tablet</td></tr>
+          <tr><td><code>lg</code></td><td>≥ 992px</td><td><code>col-lg-*</code></td><td>💻 Notebook</td></tr>
+          <tr><td><code>xl</code></td><td>≥ 1200px</td><td><code>col-xl-*</code></td><td>🖥️ Monitor grande</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <p class="bp-par reveal mt-3"><strong>Onde usamos no projeto:</strong> o menu do topo vira ☰ no celular
+    (<code>d-lg-none</code> / <code>d-none d-lg-flex</code>), o formulário reorganiza os campos com
+    <code>col-12 col-md-*</code>, e os cards passam de 1 para 3 colunas com <code>col-md-4</code>.</p>
+  </div>
+</section>
+
+<!-- ================= 05 · COMPONENTES ================= -->
+<section class="bp-sec" id="componentes">
+  <div class="container-xl">
+    <div class="sec-head reveal"><span class="num">(05)</span><span class="lbl">Componentes</span></div>
+    <h2 class="sec-title reveal" data-d="1">Os componentes <em>deste projeto</em></h2>
+    <p class="bp-par reveal" data-d="2">Cada componente abaixo é usado no site da Taleggio —
+    com função explicada e demonstração funcional. Clique e teste.</p>
+
+    <div class="row gy-4 mt-3">
+
+      <div class="col-md-6 col-lg-4">
+        <div class="bp-comp reveal">
+          <div class="bp-comp-head"><i class="bi bi-grid-3x3-gap-fill"></i><h3>Grid (container · row · col)</h3></div>
+          <p><strong>Função:</strong> organizar todo o conteúdo em linhas e 12 colunas, com alinhamento perfeito em qualquer tela.</p>
+          <p class="bp-comp-use"><strong>No projeto:</strong> base de todas as seções (hero, menú, reservas…).</p>
+        </div>
+      </div>
+
+      <div class="col-md-6 col-lg-4" data-d="1">
+        <div class="bp-comp reveal">
+          <div class="bp-comp-head"><i class="bi bi-list"></i><h3>Navbar + Collapse</h3></div>
+          <p><strong>Função:</strong> barra de navegação fixa que, em telas pequenas, esconde os links atrás de um menu recolhível.</p>
+          <p class="bp-comp-use"><strong>No projeto:</strong> o botão ☰ no celular abre o menu de links.</p>
+          <div class="bp-demo-box">
+            <button class="btn-line sm" data-bs-toggle="collapse" data-bs-target="#bpCollapse" aria-expanded="false">
+              Testar collapse <i class="bi bi-chevron-down"></i>
+            </button>
+            <div class="collapse mt-3" id="bpCollapse">
+              <div class="bp-collapse-body">✅ Este bloco foi aberto pelo componente <strong>Collapse</strong>.</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-6 col-lg-4" data-d="2">
+        <div class="bp-comp reveal">
+          <div class="bp-comp-head"><i class="bi bi-three-dots"></i><h3>Dropdown</h3></div>
+          <p><strong>Função:</strong> menu suspenso que revela opções ao ser clicado, com posicionamento automático.</p>
+          <p class="bp-comp-use"><strong>No projeto:</strong> o botão de <em>três pontos</em> ao lado de "Reservar mesa".</p>
+          <div class="bp-demo-box">
+            <div class="dropdown">
+              <button class="btn-dots" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Demo dropdown">
+                <span></span><span></span><span></span>
+              </button>
+              <ul class="dropdown-menu dots-menu">
+                <li><a class="dots-item" href="#componentes">
+                  <span class="di-icon"><i class="bi bi-1-circle"></i></span>
+                  <span class="di-text"><strong>Opção de exemplo</strong><small>menu suspenso do Bootstrap</small></span>
+                  <i class="bi bi-arrow-right di-arrow"></i></a></li>
+                <li><a class="dots-item" href="#componentes">
+                  <span class="di-icon"><i class="bi bi-2-circle"></i></span>
+                  <span class="di-text"><strong>Segunda opção</strong><small>mesmo componente do site</small></span>
+                  <i class="bi bi-arrow-right di-arrow"></i></a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-6 col-lg-4">
+        <div class="bp-comp reveal">
+          <div class="bp-comp-head"><i class="bi bi-window-desktop"></i><h3>Modal</h3></div>
+          <p><strong>Função:</strong> janela de diálogo sobre a página, com fundo bloqueado — ideal para confirmações.</p>
+          <p class="bp-comp-use"><strong>No projeto:</strong> confirma a reserva com data, pessoas e código.</p>
+          <div class="bp-demo-box">
+            <button class="btn-reserve sm" data-bs-toggle="modal" data-bs-target="#bpModal">
+              Abrir modal de teste <i class="bi bi-arrow-right"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-6 col-lg-4" data-d="1">
+        <div class="bp-comp reveal">
+          <div class="bp-comp-head"><i class="bi bi-chat-dots"></i><h3>Toast</h3></div>
+          <p><strong>Função:</strong> notificação leve que aparece por alguns segundos e some sozinha.</p>
+          <p class="bp-comp-use"><strong>No projeto:</strong> o aviso "Telefone copiado — a nonna agradece."</p>
+          <div class="bp-demo-box">
+            <button class="btn-line sm" id="bpToastBtn">Disparar toast <i class="bi bi-bell"></i></button>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-6 col-lg-4" data-d="2">
+        <div class="bp-comp reveal">
+          <div class="bp-comp-head"><i class="bi bi-input-cursor-text"></i><h3>Form controls + Cards</h3></div>
+          <p><strong>Função:</strong> os <em>form controls</em> padronizam inputs e selects; os <em>cards</em> organizam informações em blocos visuais.</p>
+          <p class="bp-comp-use"><strong>No projeto:</strong> formulário de reserva e cards dos "I Classici".</p>
+          <div class="bp-demo-box">
+            <div class="card bp-card-demo">
+              <div class="card-body">
+                <label class="form-label" for="bpInput">Input de exemplo</label>
+                <input type="text" class="form-control" id="bpInput" placeholder="Componente form-control">
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ================= FOOTER ================= -->
+<footer class="footer">
+  <div class="container-xl">
+    <div class="foot-brand">
+      <p class="foot-word" aria-hidden="true">Taleggio</p>
+      <p class="foot-tag">Trattoria italiana · <strong>dal 1987</strong><br>Jardins — São Paulo</p>
+    </div>
+    <div class="foot-grid">
+      <div class="foot-col">
+        <span class="lbl">A casa</span>
+        <p class="foot-about">Massa aberta à mão todas as manhãs e um forno a lenha que não se apaga desde 1987 — só nas segundas.</p>
+        <p class="foot-addr"><i class="bi bi-geo-alt"></i> Rua dos Pinheiros, 421 — Jardins, SP</p>
+      </div>
+      <div class="foot-col">
+        <span class="lbl">Horários</span>
+        <ul class="foot-hours">
+          <li><span>Ter – Sex</span><span>12h – 15h · 18h – 23h</span></li>
+          <li><span>Sáb – Dom</span><span>12h – 23h</span></li>
+          <li class="closed"><span>Segunda</span><span>o forno descansa</span></li>
+        </ul>
+      </div>
+      <div class="foot-col">
+        <span class="lbl">Contato</span>
+        <ul class="foot-links">
+          <li><a href="https://wa.me/551130614477" target="_blank" rel="noopener"><i class="bi bi-whatsapp"></i>WhatsApp — reservas</a></li>
+          <li><a href="tel:+551130614477" title="Funciona no celular"><i class="bi bi-telephone"></i>(11) 3061-4477</a></li>
+          <li><a href="https://www.google.com/maps/search/?api=1&amp;query=Rua+dos+Pinheiros+421+Sao+Paulo" target="_blank" rel="noopener"><i class="bi bi-geo-alt"></i>Como chegar — Maps</a></li>
+          <li><a href="https://instagram.com" target="_blank" rel="noopener"><i class="bi bi-instagram"></i>@taleggiotrattoria</a></li>
+        </ul>
+      </div>
+      <div class="foot-col">
+        <span class="lbl">Projeto</span>
+        <a class="foot-cta" href="index.html">
+          <i class="bi bi-house-door"></i>
+          <span><strong>Voltar ao restaurante</strong><small>página inicial do projeto Taleggio</small></span>
+          <i class="bi bi-arrow-right"></i>
+        </a>
+      </div>
+    </div>
+    <div class="foot-base">
+      <span>© <span id="year"></span> Trattoria Taleggio</span>
+      <span class="foot-team">
+        <i class="bi bi-people-fill"></i>
+        <strong>Leonardo M</strong><strong>Raissa Landes</strong><strong>Fabiana</strong>
+      </span>
+      <a href="#topo" class="to-top">Voltar ao topo <i class="bi bi-arrow-up"></i></a>
+    </div>
+  </div>
+</footer>
+
+<!-- modal de demonstração -->
+<div class="modal fade" id="bpModal" tabindex="-1" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content ok-modal">
+      <svg class="star-lg" viewBox="0 0 24 24"><path d="M12 0C13 7 17 11 24 12 17 13 13 17 12 24 11 17 7 13 0 12 7 11 11 7 12 0Z"/></svg>
+      <h3 class="ok-title">Este é um <em>modal!</em></h3>
+      <p class="ok-sub">Foi aberto apenas com <code>data-bs-toggle="modal"</code> e <code>data-bs-target</code>.
+      É assim que o modal de confirmação de reserva funciona na página inicial.</p>
+      <button class="btn-reserve" data-bs-dismiss="modal">Fechar <i class="bi bi-check2"></i></button>
+    </div>
+  </div>
+</div>
+
+<!-- toast de demonstração -->
+<div class="toast-wrap">
+  <div class="toast" id="bpToast" role="status">
+    <i class="bi bi-check2 me-2"></i>Toast disparado! Assim aparece o aviso de "telefone copiado".
+  </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script src="script.js"></script>
+</body>
+</html>

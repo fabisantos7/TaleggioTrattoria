@@ -1,0 +1,53 @@
+
+---
+
+## 📄 Páginas do site
+
+### 1. `index.html` — Página inicial
+
+- Hero com botão **"Reservar mesa"** e menu de **três pontos** (dropdown) ao lado
+- Selo dinâmico **"Aberto agora / Fechado"**, calculado com o horário real do visitante
+- Faixa animada (marquee) com os diferenciais da casa
+- Seções: **A casa**, **I classici**, **Il menù**, **La cantina** e **Reservas**
+- Formulário de reserva com validação, máscara de telefone e **modal de confirmação**
+- Foto do prato que segue o cursor ao passar o mouse sobre o cardápio
+- Contatos funcionais: **WhatsApp**, telefone e **Google Maps** no rodapé
+
+### 2. `bootstrap.html` — Conhecendo o Bootstrap
+
+Página de documentação da ferramenta, com navegação independente
+(botão flutuante **"← Início"** sempre visível):
+
+- **O que é o Bootstrap** — definição e contexto do framework
+- **Para que serve** — problemas que ele ajuda a resolver
+- **Sistema de grid** — `container`, `row`, `col`, `col-md` e `col-lg` com **demonstrações ao vivo** que se reorganizam ao redimensionar a janela
+- **Responsividade** — 📱 celulares, 📱 tablets, 💻 notebooks e 🖥️ monitores maiores, com detecção automática do breakpoint em uso
+- **Componentes** — 6 componentes do Bootstrap usados no projeto, com demonstrações funcionais:
+  1. Grid (container · row · col)
+  2. Navbar + Collapse (menu hambúrguer)
+  3. Dropdown (botão de três pontos)
+  4. Modal (confirmação da reserva)
+  5. Toast (aviso "telefone copiado")
+  6. Form controls + Cards (formulário e cards de pratos)
+
+---
+
+## ✨ Funcionalidades em destaque
+
+- Layout 100% responsivo (celular, tablet, notebook e desktop)
+- Formulário de reserva com validação inline, máscara de telefone e modal de confirmação
+- Dropdown de três pontos na entrada da página
+- Notificação *toast* ao copiar o telefone do restaurante
+- Menu mobile (collapse) e navbar fixa com efeito ao rolar
+- Contadores animados e elementos que surgem ao rolar a página
+- **Script resiliente:** funciona mesmo se o CDN do Bootstrap estiver indisponível (fallbacks próprios para modal, dropdown, collapse e toast)
+- Fallback automático caso alguma imagem externa falhe
+- Link de navegação flutuante fixo na página de documentação
+
+---
+
+## 🚀 Como executar
+
+1. Clone ou baixe este repositório:
+   ```bash
+   git clone https://github.com/leloo0/TaleggioTrattoria.git
